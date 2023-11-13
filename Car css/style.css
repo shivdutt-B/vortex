@@ -1,0 +1,882 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100&family=Exo+2&family=Kanit:wght@300&family=Oswald:wght@600&family=Roboto&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+}
+* {
+  font-family: "Exo 2", sans-serif;
+  list-style-type: none;
+}
+:root {
+  --theme-color: hsl(219, 69%, 56%);
+  --text-color: #fdfdfd;
+  --bg-color: hsl(219, 4%, 4%);
+  --title-color: hsl(219, 8%, 95%);
+  --desc-text: hsl(219, 8%, 75%);
+  --symbol-color: hsl(219, 4%, 55%);
+  --card-bg: #101214;
+  --nav-bg: rgba(9, 9, 9, 0.877);
+}
+
+/* NAV BAR */
+nav {
+  z-index: 999;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(20px);
+}
+.nav-bar {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* nav-bar logo */
+.nav-logo {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.nav-logo a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.nav-logo svg{
+  padding:5px;
+  color:var(--theme-color);
+  width:36px;
+}
+
+/* nav-bar links */
+.nav-links ul {
+  display: flex;
+}
+.nav-links a {
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 40px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-ham {
+  display: none;
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+/* hover effect on nav links */
+.nav-bar a:hover {
+  color: var(--theme-color);
+}
+
+/* MAIN */
+main {
+  max-width: 85%;
+  margin: 100px auto 0 auto;
+}
+.show-piece {
+  color: var(--text-color);
+  text-align: center;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.show-piece-car-heading {
+  font-size: 30px;
+}
+.show-piece-car-name {
+  font-size: 25px;
+}
+.show-piece h2 {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(219, 4%, 55%);
+}
+.show-piece h2 div {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--theme-color);
+  display: inline-block;
+}
+.show-piece-poster-container {
+  width: 100%;
+}
+.show-piece-carousel {
+  display: inline-block;
+  position: relative;
+}
+.show-piece-poster-container img {
+  max-width: 500px;
+  margin: auto;
+}
+.show-piece-feature {
+  font-size: 18px;
+  color: var(--symbol-color);
+  text-align: center;
+  position: absolute;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.575);
+  backdrop-filter: blur(20px);
+  color: var(--text-color);
+}
+.show-piece-feature span {
+  font-size: 12px;
+}
+.feature-1 {
+  top: -22px;
+  left: -30px;
+}
+.feature-2 {
+  top: -5px;
+  right: 0;
+}
+.feature-3 {
+  bottom: 0px;
+  right: -1px;
+}
+.show-piece-feature::before {
+  content: " ";
+  padding: 8px;
+  border-radius: 50%;
+  outline: 2px solid var(--theme-color);
+  outline-offset: 2px;
+  position: absolute;
+  display: inline-block;
+  background-color: var(--theme-color);
+}
+.feature-1::before {
+  top: 127px;
+  left: 157px;
+}
+
+.feature-2::before {
+  top: 118px;
+  right: 152px;
+}
+.feature-3::before {
+  top: -101px;
+  right: 246px;
+}
+.show-piece-feature::after {
+  content: " ";
+  padding: 1.5px;
+  position: absolute;
+  background-color: var(--theme-color);
+}
+.feature-1::after {
+  transform: rotate(50deg);
+  width: 102px;
+  top: 90px;
+  right: -79px;
+}
+.feature-2::after {
+  transform: rotate(140deg);
+  width: 161px;
+  width: 116px;
+  top: 85px;
+  right: 53px;
+}
+.feature-3::after {
+  transform: rotate(209deg);
+  width: 161px;
+  width: 208px;
+  top: -39px;
+  right: 51px;
+}
+
+/* ABOUT */
+#about {
+  display: flex;
+  margin-top: 100px;
+  color: var(--text-color);
+  align-items: center;
+  padding: 0 50px 0px 50px;
+}
+.about-poster {
+  position: relative;
+}
+.about-poster-note,
+.more-features-note {
+  position: absolute;
+  width: 150px;
+  font-size: 15px;
+  background-color: rgba(128, 128, 128, 0.432);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  padding: 10px 5px;
+  bottom: -30px;
+  right: 10px;
+  text-align: center;
+}
+.about-poster-note span,
+.more-features-note span {
+  font-size: 20px;
+}
+.about-poster img {
+  max-width: 500px;
+  border-radius: 15px;
+}
+.about-content {
+  padding: 50px 0px 0px 30px;
+}
+.about-know-more {
+  display: block;
+  padding: 13px;
+  background-color: var(--theme-color);
+  border: none;
+  margin-top: 30px;
+  font-size: 18px;
+  border-radius: 3px;
+  color: var(--text-color);
+}
+.porsche-car {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border:1px solid blue; */
+}
+.porsche-car p {
+  color: var(--text-color);
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.wrapper {
+  display: flex;
+  max-width: 100%;
+  position: relative;
+}
+
+.featured-car-carousel {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 30px;
+  width: 100%;
+  justify-content: space-around;
+}
+.wrapper .car-carousel {
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.car-carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.car-carousel.dragging > div {
+  pointer-events: none;
+}
+.carousel-item,
+.featured-car-carousel-item {
+  cursor: pointer;
+  color: var(--text-color);
+  object-fit: cover;
+  display: inline-block;
+  background-color: rgb(17, 13, 13);
+  user-select: none;
+  margin-left: 14px;
+  padding: 10px;
+  width: 250px;
+  font-size: 20px;
+  margin-left: 30px;
+  border-radius: 15px;
+  background-color: var(--card-bg);
+  position: relative;
+  transition: all 0.7s;
+}
+.featured-car-carousel-item {
+  margin-top: 50px;
+  width: 250px;
+  margin-left: 0;
+}
+.carousel > div:first-child {
+  margin-left: 0px;
+}
+
+.carousel-item:first-child {
+  margin-left: 0;
+}
+.item-headig {
+  margin-bottom: 20px;
+}
+.item-heading span {
+  color: var(--symbol-color);
+  display: block;
+}
+.item-poster img {
+  width: 100%;
+  transition: all 0.5s;
+}
+.item-poster img:hover {
+  transform: translateY(-5px);
+}
+.item-desc {
+  margin-top: 20px;
+  color: var(--symbol-color);
+  font-size: 18px;
+}
+.item-price {
+  color: var(--text-color);
+}
+.item-second-speed {
+  display: flex;
+  justify-content: space-between;
+}
+.item-price {
+  margin: 40px 0 20px 0;
+}
+.add-to-cart-label {
+  position: absolute;
+  padding: 8px 13px;
+  right: 0;
+  bottom: 0;
+  background-color: var(--theme-color);
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.left-right-btn,
+.featured-car-left-right-btn {
+  color: var(--text-color);
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
+}
+.left-right-btn i,
+.featured-car-left-right-btn i {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 17px;
+  background-color: var(--theme-color);
+}
+.left-right-btn i:first-child,
+.featured-car-left-right-btn i:first-child {
+  margin-right: 10px;
+}
+
+/* Car on map section (more features) */
+
+.more-features-container {
+  height: 500px;
+  margin-top: 100px;
+  position: relative;
+}
+.more-features {
+  height: 100%;
+}
+.beneth-map {
+  height: 100%;
+  width: 100%;
+}
+.onmap-container {
+  top: 0;
+  height: 100%;
+  left:50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+img.onmap {
+  height: 100%;
+}
+.more-features-note {
+  position: absolute;
+}
+.more-features-note span {
+  display: block;
+}
+.note1 {
+  top: 42%;
+  color: white;
+  bottom: 0px;
+  width: 100px;
+  height: 70px;
+  left: 100%;
+}
+.note1::after {
+  content: " ";
+  padding: 8px;
+  border-radius: 50%;
+  outline: 2px solid #054aca;
+  outline-offset: 2px;
+  position: absolute;
+  right: 200px;
+  display: inline-block;
+  background-color: #054aca;
+}
+.note1::before {
+  content: " ";
+  height: 2px;
+  border-radius: 50%;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  transform: rotate(171deg);
+  width: 100%;
+  display: inline-block;
+  background-color: #054aca;
+}
+.note2 {
+  /* top: 400px; */
+  color: white;
+  bottom: 0px;
+  width: 100px;
+  height: 50px;
+  right: 100%;
+}
+
+.note2::after {
+  content: " ";
+  padding: 8px;
+  border-radius: 50%;
+  position: absolute;
+  left: 208px;
+  outline: 2px solid #054aca;
+  outline-offset: 2px;
+  top: -38px;
+  display: inline-block;
+  background-color: #054aca;
+}
+.note2::before {
+  content: " ";
+  height: 2px;
+  position: absolute;
+  top: -9px;
+  left: 103px;
+  transform: rotate(159deg);
+  width: 100%;
+  display: inline-block;
+  background-color: #054aca;
+}
+
+.note3 {
+  top: 12%;
+  color: white;
+  bottom: 0px;
+  width: 100px;
+  height: 50px;
+  right: 100%;
+}
+.note3::after {
+  content: " ";
+  padding: 8px;
+  border-radius: 50%;
+  position: absolute;
+  left: 202px;
+  outline: 2px solid #054aca;
+  outline-offset: 2px;
+  top: 110px;
+  display: inline-block;
+  background-color: #054aca;
+}
+.note3::before {
+  content: " ";
+  height: 2px;
+  position: absolute;
+  top: 88px;
+  left: 98px;
+  transform: rotate(208deg);
+  width: 100%;
+  display: inline-block;
+  background-color: #054aca;
+}
+.featured-luxury-car-container {
+  margin-top: 100px;
+}
+.featured-luxury-car-container-heading {
+  font-size: 30px;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+.featured-luxury-car-company {
+  margin: 0 auto 40px auto;
+  max-width: 300px;
+}
+.featured-luxury-car-company ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.featured-luxury-car-company li {
+  padding: 5px;
+  object-fit: contain;
+  width: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  height: 40px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.featured-luxury-car-company li:first-child {
+  margin-left: 0;
+  background-color: var(--theme-color);
+}
+.featured-luxury-car-company img {
+  width: 100%;
+}
+.subscribe-container{
+  height:400px;
+  margin-top:100px;
+  position: relative;
+}
+.subscribe{
+  display: flex;
+  align-items: center;
+  background-image:url('/Car/Car Media/subscribe-bg.png');
+  background-size:cover;
+  background-position:center;
+  height:100%;
+  left:50%;
+  width:100%;
+  margin:auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.subscribe-content{
+  padding:0 30px ;
+  color:var(--text-color);
+}
+.subscribe-btn{
+  display: block;
+  padding:17px 20px;
+  font-weight: 400;
+  color:var(--text-color);
+  font-size:17px;
+  outline:none;
+  background-color: var(--theme-color);
+  border-radius: 5px;
+  margin-top:15px;
+  border:none;
+  cursor: pointer;
+}
+.subscribe img{
+  width:100%;
+  margin:auto;
+  display: block;
+}
+.car-logos-container{
+  margin-top:100px;
+}
+.car-logos ul{
+  padding:0;
+  width:100%;
+  display: grid;
+  grid-template-columns:repeat(6, auto) ;
+  justify-content: space-around;
+  row-gap:20px;
+}
+.car-logos ul li{
+  padding:10px;
+  width:50px;
+  height:50px;
+  display: inline-flex;
+  align-items: center;
+  cursor:pointer;
+}
+.car-logos img{
+  width:100%;
+  filter:opacity(0.5);
+  transition: all 0.7s;
+}
+.car-logos ul li:hover img{
+  filter: opacity(1);
+}
+footer{
+  padding:20px;
+  margin:100px auto 0 auto;
+}
+.footer-container{
+  display: flex;
+  margin:auto;
+  justify-content: space-around;
+  color:var(--text-color);
+}
+.footer-container ul{
+  padding:0;
+  margin-top:5px;
+}
+.list-heading{
+  font-size:23px;
+}
+.footer-container a{
+  text-decoration:none ;
+  color:var(--text-color);
+}
+.footer-container ul li{
+  padding:5px;
+}
+.company-footer-logo-heading{
+  display: block;
+}
+.company-footer-logo-heading a{
+  display: flex;
+  align-items: center;
+  color:var(--text-color);
+  text-decoration: none;
+  font-size:25px;
+}
+.company-footer-logo-heading svg{
+  padding:5px;
+  width:30px;
+}
+.company-socials ul {
+  display: flex;
+}
+.company-socials ul li{
+  padding:5px;
+  font-size:17px;
+  margin-right:10px;
+}
+.company-socials ul li:last-child{
+  margin-right:0;
+}
+
+@media only screen and (max-width: 580px) {
+  main {
+    max-width: 100% !important;
+  }
+  .show-piece {
+    color: var(--text-color);
+    text-align: center;
+    width: 100%;
+  }
+  .show-piece-car-heading {
+    font-size: 25px;
+  }
+  .show-piece-car-name {
+    font-size: 20px;
+  }
+  .show-piece h2 {
+    font-size: 17px;
+  }
+  .show-piece-poster-container {
+    width: 100%;
+  }
+  .show-piece-carousel {
+    width: 90%;
+  }
+  .show-piece-poster-container img {
+    max-width: 100%;
+    margin: auto;
+  }
+  .show-piece-feature {
+    font-size: 15px;
+  }
+  #about {
+    padding: 0;
+    display: block !important;
+    margin-top: 100px;
+    color: var(--text-color);
+    align-items: center;
+  }
+  .about-poster {
+    width: 90%;
+  }
+  .about-poster {
+    max-width: 100%;
+    margin: auto;
+  }
+  .about-poster img {
+    width: 100%;
+  }
+  .about-content {
+    padding: 50px 10px 0 10px;
+  }
+  .car-carousel {
+    margin: auto;
+    width: 90%;
+  }
+  .feature-1::before,
+  .feature-1::after,
+  .feature-2::before,
+  .feature-2::after,
+  .feature-3::before,
+  .feature-3::after {
+    display: none;
+  }
+
+  .more-features-note {
+    position: absolute;
+    font-size:80%
+  }
+  .more-features-note span {
+    display: block;
+    font-size: 18px;
+  }
+  .note1::before,
+  .note1::after,
+  .note2::before,
+  .note2::after,
+  .note3::before,
+  .note3::after {
+    content: none;
+  }
+  .note1 {
+    left: 70%;
+    top: 46%;
+  }
+  .note2 {
+    left: -20%;
+    top: 5%;
+  }
+  .note3 {
+    left: -13%;
+    top: 83%;
+  }
+}
+
+/* Setting up the carousel according to screeen size: */
+@media only screen and (min-width:0px) and (max-width:600px){
+  .featured-car-carousel{
+    grid-template-columns: auto !important;
+  }
+}
+@media only screen and (min-width:600px) and (max-width:1000px){
+  .featured-car-carousel{
+    grid-template-columns: repeat(2,auto) !important;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+
+  nav{
+    z-index: 999;
+  }
+  .nav-bar{
+    position: relative;
+    background-color: var(--bg-color);
+  }
+  .nav-links{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width:100%;
+    top:0;
+    background-color: var(--bg-color);
+    top:60px;
+    transform:translateY(-120%);
+    visibility: hidden;
+    opacity: 0;
+    transition:all 0.7s;
+  }
+  .nav-links ul{
+    display: flex;
+    line-height:80px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mobile-nav{
+    transform: translateY(0%);
+    visibility: visible ;
+    opacity: 1;
+  }
+  .nav-links a{
+    padding:10px;
+  }
+  .nav-logo a span{
+    display: none;
+  }
+  .nav-ham{
+    display: block;
+    display: flex;
+    align-items: center;
+    margin-right:20px;
+  }
+  .nav-ham i{
+    padding:5px 10px;
+    font-size:30px;
+    cursor: pointer;
+  }
+  .nav-ham i:hover{
+    color:var(--theme-color);
+  }
+  .ham-nav-visible{
+    display: none !important;
+  }
+  .featured-car-carousel-item {
+    margin-top: 0;
+  }
+  .subscribe{
+    flex-direction:column;
+    font-size:16px;
+  }
+  .subscribe h2{
+    font-size:22px;
+  }
+  .subscribe-btn{
+    padding:14px 11px;
+  }
+  .car-logos ul{
+    grid-template-columns:repeat(3, auto) ;
+    grid-template-rows:repeat(2,auto)
+  }
+  footer{
+    margin:50px auto 0 auto;
+  }
+  .footer-container{
+    display: block;
+  }
+  .footer-container > div{
+    margin-top:30px;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  #about {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .featured-car-carousel {
+    display: grid;
+    justify-content: space-around;
+  }
+  .featured-car-carousel-item {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  #about {
+    margin-top: 50px;
+  }
+  .porsche-car {
+    margin-top: 50px;
+  }
+}
