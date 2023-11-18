@@ -88,7 +88,7 @@ nav {
 /* MAIN */
 main {
   max-width: 85%;
-  margin: 100px auto 0 auto;
+  margin: 60px auto 0 auto;
 }
 .show-piece {
   color: var(--text-color);
