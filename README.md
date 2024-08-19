@@ -1,5 +1,5 @@
 # Vortex
-[Vortex](https://impersona.netlify.app/)
+[Vortex](https://vortex-steel-chi.vercel.app/)
 
 # Screenshot
 ![image](https://github.com/shivdutt-B/vortex/assets/136951010/e9fbfd4c-276d-4b48-89ae-ba62aa703edb)
